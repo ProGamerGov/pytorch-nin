@@ -40,7 +40,7 @@ class NIN(nn.Module):
 	    nn.ReLU(inplace=True),
 	    nn.Conv2d(1024,1000,(1, 1)),
 	    nn.ReLU(inplace=True),
-	    #nn.AvgPool2d((6, 6),(1, 1),(0, 0),ceil_mode=True), This layer causes errors
+	    nn.AvgPool2d((6, 6),(1, 1),(0, 0),ceil_mode=True),
 	    nn.Softmax(),
         )
 
