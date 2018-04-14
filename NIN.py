@@ -59,10 +59,8 @@ def SetupNIN(pooling):
     return model, nin_dict
 
 
+# Example usage:
 pooling = 'max'
 cnn, layerList = SetupNIN(pooling)
-
-
 cnn.load_state_dict(torch.load('nin_imagenet2.pth')) 
-
 print(cnn)
